@@ -1,10 +1,9 @@
 ---
-
-title: "自我介绍"
+title: "我的TCP IP：直发Ethernet帧"
 
 date: "2024-09-21"
 
-description: "这是我的第一篇博客文章。"
+description: "我的TCP IP 第一章"
 
 ---
 
