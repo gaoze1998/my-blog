@@ -1,10 +1,14 @@
 // pages/_app.js
 import Link from 'next/link';
 import '../styles/globals.css';
+import Head from 'next/head';
 
 function MyApp({ Component, pageProps }) {
   return (
     <>
+      <Head>
+        <title>高泽的博客</title>
+      </Head>
       <header className="bg-gray-800 text-white p-4">
         <nav className="max-w-2xl mx-auto">
           <Link href="/" legacyBehavior>
