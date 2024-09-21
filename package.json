@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "@cloudflare/next-on-pages": "^1.13.2",
+    "@tailwindcss/typography": "^0.5.15",
     "gray-matter": "^4.0.3",
     "next": "14.2.13",
     "react": "^18",

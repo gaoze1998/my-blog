@@ -10,7 +10,15 @@ export default function PostPage({ frontMatter, content }) {
       <h1 className="text-4xl font-bold mb-2">{frontMatter.title}</h1>
       <p className="text-gray-500 mb-4">{frontMatter.date}</p>
       <div className="prose lg:prose-xl">
-        <ReactMarkdown>{content}</ReactMarkdown>
+      <ReactMarkdown
+          components={{
+            h1: ({node, ...props}) => <h1 className="text-4xl" {...props} />,
+            h2: ({node, ...props}) => <h2 className="text-3xl" {...props} />,
+            // Add more custom components as needed
+          }}
+        >
+          {content}
+        </ReactMarkdown>
       </div>
     </div>
   );
