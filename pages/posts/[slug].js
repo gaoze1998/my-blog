@@ -3,6 +3,8 @@ import fs from 'fs';
 import path from 'path';
 import matter from 'gray-matter';
 import ReactMarkdown from 'react-markdown';
+import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
+import { tomorrow } from 'react-syntax-highlighter/dist/cjs/styles/prism';
 
 export default function PostPage({ frontMatter, content }) {
   return (
@@ -14,6 +16,25 @@ export default function PostPage({ frontMatter, content }) {
           components={{
             h1: ({node, ...props}) => <h1 className="text-4xl" {...props} />,
             h2: ({node, ...props}) => <h2 className="text-3xl" {...props} />,
+            h3: ({node, ...props}) => <h3 className="text-2xl" {...props} />,
+            h4: ({node, ...props}) => <h4 className="text-1xl" {...props} />,
+            code: ({node, inline, className, children, ...props}) => {
+              const match = /language-(\w+)/.exec(className || '');
+              return !inline && match ? (
+                <SyntaxHighlighter
+                  style={tomorrow}
+                  language={match[1]}
+                  PreTag="div"
+                  {...props}
+                >
+                  {String(children).replace(/\n$/, '')}
+                </SyntaxHighlighter>
+              ) : (
+                <code className={className} {...props}>
+                  {children}
+                </code>
+              );
+            },
             // Add more custom components as needed
           }}
         >
