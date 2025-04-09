@@ -1,5 +1,5 @@
 ---
-title: "自我介绍"
+title: "Redis Sentinel - 1"
 
 date: "2025-04-09"
 
