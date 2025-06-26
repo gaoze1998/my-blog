@@ -13,8 +13,6 @@ description: "这是我的第一篇博客文章。"
 
 我是高泽，硕士毕业于哈尔滨工业大学计算机科学与技术专业。
 
-目前工作于蔚来汽车供应链软件团队，主要工作技术栈为：Java，Springboot，MySQL，Kafka，Redis，Python，Spark。
-
 喜欢钻研系统设计。
 
 我喜欢玩电子游戏CS，文明。
